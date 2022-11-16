@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+        div{
+                margin: 100px;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #ccc;
+            }
+    @keyframes ani01{
+        /* 애니메이션 시작 또는 0% */
+        from {
+            background-color: crimson;
+            transform: translate(0, 0);
+        }
+        50% {
+            width: 30px;
+            transform: translate(250px, 0px) rotate(90deg);
+        }
+
+        /* 애니메이션 끝 또는 100% */
+        to{
+            transform: translate(200px, 0);
+        }
+    }
+    .box01{
+                margin: 100px;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #ccc;
+                animation-name: ani01;
+                animation-delay: 1s;
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+    @keyframes ani2 {
+            0%{
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50%{
+                width: 200px;
+                transform: translate(250px, 0px) rotate(90deg);
+            }
+            70%{
+                width: 10px;
+                background-color: aqua;
+                transform: translate(0, 300px) rotate(270deg);
+            }
+            100%{
+                width: 100px;
+                transform: translate(0, 500px) rotate(360deg);
+            }
+        }
+
+    .box02{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        animation-name: ani2;
+        animation-delay: 1s;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes ani3 {
+            0%{
+                background-color: crimson;
+                transform: translate(0, 0) rotate(0deg);
+            }
+            20%{
+                background-color: coral;
+                width: 200px;
+                transform: translate(50px, 75px) rotate(45deg);
+            }
+            35%{
+                background-color: gold;
+                width: 50px;
+                transform: translate(70px, 75px) rotate(65deg);
+            }
+            50%{
+                background-color: green;
+                width: 200px;
+                transform: translate(125px, 150px) rotate(90deg);
+            }
+            70%{
+                background-color: blue;
+                width: 10px;
+                background-color:;
+                transform: translate(100px, 300px) rotate(450deg);
+            }
+            85%{
+                width: 150px;
+                background-color:saddlebrown;
+                transform: translate(100px, 300px) rotate(450deg);
+            }
+            100%{
+                background-color:blueviolet;
+                height: 250px;
+                transform: translate(100px, 500px) rotate(360deg);
+            }
+        }
+
+    .box03{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        animation-name: ani3;
+        animation-delay: 1s;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    </style>
+</head>
+<body>
+    <div class="box01">box01</div>
+    <div class="box02">box02</div>
+    <div class="box03">box03</div>
+
+    <div class="box04">box04</div>
+    <div class="box05">box05</div>
+    <div class="box06">box06</div>
+
+
+</body>
+</html>

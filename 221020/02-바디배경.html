@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextStyle</title>
+    <style>
+        body{
+            background-color: bisque;
+            /* */
+            background-image: url(./image/img10.jpg);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+
+            /* px로 위치를 설정하면 배경이미지의 이동 좌표 */
+            /* %도 사용 가능하나 body 범위가 반드시 설정되어야 기준을 잡고 위치 설정이 된다  */
+            /* background-position: 50% 250px; */
+            background-position: center top;
+        }
+
+        .box1 {
+            width: 500px;
+            height: 300px;
+            background-color: aliceblue;
+            /* background-color 보다 image 가 우선순위 */
+            background-image: url(./image/img11.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .box2{
+            /* span 명령어에도 크기 적용 하도록 하는 명령어 */
+            display: block;
+            /*  */
+            width: 500px;
+            height: 300px;
+            background-color: brown;
+        }
+       
+    </style>
+</head>
+
+<body style="height:5000px;">
+
+    <!-- 내용 상관없이 설정한 크기만큼 적용 -->
+    <div class="box1"></div>
+    <!-- 설정한 내용 크기만큼 적용 그러므로 설정크기 명령어 적용 안됨 -->
+    <span class="box2"></span>
+
+
+
+</body>
+    
+
+</html>

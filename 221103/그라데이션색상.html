@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border: 2px solid #000;
+        }
+        .box01{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 50px;
+            background-color: rgba(75, 248, 248, 0.8);
+            /* https://www.webfx.com/web-design/color-picker/ */
+            /* R = 레드 G=녹색 B=파랑 A=투명도 */
+        }
+        .box02{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 50px;
+            background-color: hsla(180, 69.76%, 97.25%, 0.8);
+            /* https://www.webfx.com/web-design/color-picker/ */
+            /* hsla(hue = 색상 saturation = 채도 lightness= 명도 alpha = 투명도); */
+
+        }
+        .box03{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 50px;
+            background-color: crimson;
+        }
+        .box04{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 50px;
+            background-color: aqua;
+            /*-----------------------------------------------------------------------------*/
+            background: -webkit-linear-gradient(0deg, red, blue);
+            /*  https://www.colorzilla.com/gradient-editor/ <= 여기서 색상 선택 후 소스 복사 후 붙여넣기
+                [CSS3 웹 브라우저별 접두사(vendor prefix)]
+                파이어폭스      -moz-
+                크롭, 사파리    -webkit-
+                오페라          -o-
+                익스플로러(엣지) -ms-
+            */
+        }
+        .box05{
+            margin-bottom: 50px;
+            background-color: aqua;
+            background: -webkit-linear-gradient(45deg, red 70%, blue 70%);
+        }
+        .nav{
+            margin: 50px;
+            width: 600px;
+            height: 50px;
+            border: 5px;
+            border: 1px solid #CCC;
+            background: -webkit-linear-gradient(#18def5, #0aacbe, #18def5, #0aacbe);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        .nav ul{
+            margin: 0 auto;
+            margin-top: 10px;
+            width: 500px;
+            height: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            list-style: none;
+            border-radius: 3px;
+        }
+        .nav ul li{
+            float: left;
+            width: 25%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-sizing: border-box;
+        }
+        .box06-1{
+            width: 500px;
+            height: 300px;
+            margin-bottom: 50px;
+            background:-webkit-radial-gradient(red, blue, green);
+        }
+        .box06-2{
+            width: 300px;
+            height: 500px;
+            margin-bottom: 50px;
+            background:-webkit-radial-gradient(red, blue, green);
+        }
+        .box06-3{
+            width: 300px;
+            height: 500px;
+            margin-bottom: 50px;
+            background:-webkit-radial-gradient(circle, red 50%, blue 80%, green 10%);
+        }
+    </style>
+</head>
+<body>
+        <div class="box01">box01(rgba)</div>
+        <div class="box02">box02(hsla)</div>
+        <div class="box03">box03</div>
+        <div class="box04">box04(gradient)</div>
+        <div class="box05">box05(gradient)</div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="">menu</a></li>
+                <li><a href="">menu</a></li>
+                <li><a href="">menu</a></li>
+                <li><a href="">menu</a></li>
+            </ul>
+        </div>
+
+        <div class="box06-1">box06-1</div>
+        <div class="box06-2">box06-2</div>
+        <div class="box06-3">box06-3</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border: 1px solid fuchsia;
+            background-color: aquamarine;
+            color: black;
+        }
+    </style>
+</head>
+<body style="height: 3000px;">
+    <form method="post" action="./text.php"> <!-- input태그 묶음을 하는 그룹태그 -->
+        <p>
+            아이디 : <input type="text" size="20" maxlength="4" placeholder="아이디를 입력하세요"/>
+        </p>
+        <p>
+            비밀번호 : <input type="password" size="20" maxlength="8" placeholder="비밀번호를 입력하세요">
+        </p>
+        <p>
+            <!-- 성별: <label for="MAN">남자</label> <input type="radio" name="MAN"> 
+                  <label for="WOMEN">여자</label> <input type="radio" name="WOMEN"> -->
+            성별 : <label>남자 <input type="radio" name="gender"></label>
+                  <label>여자 <input type="radio" name="gender"></label>
+        </p>
+        <p> 취미 : 
+                <label>드라이브 <input type="checkbox" name="hobby"></label>
+                <label>영화감상 <input type="checkbox" name="hobby"></label>
+                <label>게임 <input type="checkbox" name="hobby"></label>
+                <label>등산 <input type="checkbox" name="hobby"></label>
+        </p>
+        <p>
+            직업 :
+            <select>
+                <option value="">선택하세요</option>
+                <option value="학생">학생</option>
+                <option value="컴퓨터/인터넷">컴퓨터/인터넷</option>
+                <option value="언론">언론</option>
+                <option value="공무원">공무원</option>
+                <option value="서비스업">서비스업</option>
+                <option value="의료">의료</option>
+                <option value="기타">기타</option>
+            </select>
+        </p>
+        <P>
+            <textarea cols="50" lows="5"></textarea>
+
+        </P>
+            <P>사진: <input type="file"> </P>
+        <p>
+            <input type="submit" value="전송"/>
+            <input type="reset" value="재작성"/>
+            <input type="button" value="클릭" onclick="alert('클릭되었습니다')"/>
+            <button>버튼태크</button>
+        </p>
+
+
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <a href="#">TOP</a>
+</body>
+</html>

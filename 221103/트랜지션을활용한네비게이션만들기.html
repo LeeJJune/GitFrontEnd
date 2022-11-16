@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+            ul, li{
+                list-style: none;
+            }
+            .nav{
+                width: 500px;
+                height: 30px;
+                border: 1px solid #000;
+            }
+            .nav > li{
+                float: left;
+                width: 20%;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+            .nav > li:hover{
+                background-color: aqua;
+                color: aliceblue;
+                transition: 1.5s;
+            }
+            .nav > li:hover > a{
+                text-decoration: none;
+                color: crimson;
+            }
+            .nav .sub{
+                border: 1px solid #000;
+                opacity: 0;
+            }
+            .nav .sub li{
+                border-bottom: 1px solid darkcyan;
+            }
+            .nav .sub li:hover{
+                background-color:blueviolet;
+                transition: 1.5s;
+            }
+            .nav > li:hover .sub{
+                opacity: 1;
+                transition: 1.5s;
+            }
+            
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+            </ul>
+            <li>
+                <a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+    </li>
+
+
+</body>
+</html>

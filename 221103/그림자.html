@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border: 2px solid #000;
+        }
+        h1{
+            font-size: 100px;
+            text-shadow:
+            0 0 4px #ccc,
+            1px -3px 4px rgb(120, 27, 27),
+            -1px -4px 6px rgb(59, 30, 185),
+            1px -12px 12px rgb(223, 15, 143);
+        }
+        .box01{
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            -webkit-box-shadow: 10px 10px 15px 15px rgb(120, 27, 27);
+            -moz-box-shadow: 10px 10px 10px 10px rgb(59, 30, 185);
+            text-shadow: 0 0 4px #ccc;
+
+        }
+        .box01:hover{
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 0 4px #000;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>text-shadow</h1>
+    <div class="box01">box01</div>
+</body>
+</html>

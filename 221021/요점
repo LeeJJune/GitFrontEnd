@@ -1,0 +1,12 @@
+
+
+display: 화면 보여주는 방식
+display:none; 화면에서 숨김.
+display:block:화면에서 보임
+
+visibility:화면에 보이거나 숨기거나 함.
+visibility:hidden; 화면에서 숨김
+visibility:visible; 화면에서 보여줌
+
+opacity: 투명도를 조설 속성
+oopacity: 0~1 1:100% , 0.5: 50%

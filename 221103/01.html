@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+            div{
+                margin: 100px;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #ccc;
+            }
+            .box01{
+                transform: translate(500px, 300px);
+            }
+            .box02{
+                transform: translateX(200px);
+            }
+            .box03{
+                transform: scale(1.5); /* 1 => 100% 1.5 => 150% */
+            }
+            .box03-1{
+                transform: scaleX(1.5); /* scaleX 가로값 scaleY 세로값 존재 */
+            }
+            .box04{
+                transform: rotate(45deg); /* deg 단위 넣어줘야함*/
+            }
+            .box05{
+                transform: skew(45deg, 0);
+            }
+            .box05-1{
+                transform: skew(0, 45deg);
+            }
+    </style>
+</head>
+<body>
+    <div class="box01">box01</div>
+    <div class="box02">box02</div>
+    <div class="box03">box03</div>
+    <div class="box03-1">box03-1</div>
+    <div class="box04">box04</div>
+    <div class="box05">box05</div>
+    <div class="box05-1">box05-1</div>
+</body>
+
+</html>

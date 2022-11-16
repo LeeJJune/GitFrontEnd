@@ -1,0 +1,9 @@
+outline요소의 아웃라인을 그림 border와는 별개의 속성이며 
+border를 설정한는 것과 같이 아래의 속성을 단축하여 사용할 수 있음
+
+outline-style : 아웃라인의 형식
+outline-color : 아웃라인의 색상
+outline-width : 아웃라인의 두께
+
+outline-offset:[d];
+d : 아웃라인을 옵셋시키는 거리로 음수값도 가능함

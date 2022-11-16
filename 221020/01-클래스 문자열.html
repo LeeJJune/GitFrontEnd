@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextStyle</title>
+    <style>
+        .txt1 {
+            font-size: 20px;
+            /* line-height: 30px; */
+            /* line-height: 105%; */
+            /* 100% 는 지정된 글자 크기 */
+            line-height: 2; /* 1.2 = 120% 와 동일 */
+        }
+        .txt1-1{
+            /* 하단 밑줄 */
+            text-decoration: underline;
+        }
+        .txt1-2{
+            /* 상단 줄 */
+            text-decoration: overline;
+        }
+        .txt1-3{
+            /* 가운데 줄 */
+            text-decoration: line-through;
+            /* 가운데 줄 스타일 변경 */
+            text-decoration-color: blue;
+            text-decoration-style: dashed;
+        }
+
+        .txt2{
+            text-indent: 50%;
+        }
+        .txt3{
+            /* float: left; <- 대기 */
+            width: 500px;
+            height: 200px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 200px; /* height 값과 동일하면 가운데 정렬됨 */
+            /* vertical-align: middle; <- 대기 */
+        }
+        .txt4{
+            /* 한글자 한글자 간격 조절 */
+            /* letter-spacing: 10px; */
+            /* letter-spacing: 2em;  */
+            /* 글자는 %가 적용이 안됨 1em 현재 body의 글자크기 16px의 100% */
+            
+            /* 단어와 단어 간격 조절 */
+            word-spacing: 10px;
+
+        }
+        .btn{
+            /* 밑줄 없앨때 사용 */
+            text-decoration: none;
+
+        }
+    </style>
+    <style>
+        .front01{
+            /* 첫글자 대문자 */
+            text-transform: capitalize;
+        }
+        .front02{
+            /* 전체 소문자 */
+            text-transform: lowercase;
+        }
+        .front03{
+            /* 전체 대문자 */
+            text-transform: uppercase;
+        }
+        .front04{
+            /* 바꾸지 않음 */
+            text-transform: none;
+        }
+    </style>
+</head>
+
+<body style="height:5000px;">
+        <p class="txt1">
+            <span class="txt1-1">문단태그입니다</span><br>
+            <span class="txt1-2">문단태그입니다</span><br>
+            <span class="txt1-3">문단태그입니다</span><br>
+            문단태그입니다<br>
+        </p>
+        <p class="txt2">들여쓰기 문단태그입니다<br></p>
+        <P class="txt3">글자 가로정렬<br></P>
+        <p class="txt4">단어 와 단어 사이 간격 또는 한글자 한글자 간격</p>
+        <p><a href="#" class="btn"> 네이버로 가기 </a></p>
+        
+        <br><br><br>
+        
+        <p class="front01">FrontEnd</p>
+        <p class="front02">FrontEnd</p>
+        <p class="front03">FrontEnd</p>
+        <p class="front04">FrontEnd</p>
+
+</body>
+    
+
+</html>

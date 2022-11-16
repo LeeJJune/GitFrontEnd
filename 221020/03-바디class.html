@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextStyle</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            /* 바깥 간격 조절 */
+            /* margin: 50px; */
+            /* 안쪽 여백 조절 */
+            padding: 20px;
+            color: #FFF;
+            font-size: 30px;
+        }
+        .box1{
+            float: left;
+            background-color: aqua;
+            margin: 50px;
+        }
+        .box2{
+            float: left;
+            background-color: blue;
+            margin: 50px 150px;
+        }
+        .box3{
+            /* float: left; */
+            /* 위에 공간이 없을때 아래 clear both 사용후 float 사용하면 정상 작동 */
+            /* clear both는 크기에 상관없이 한공간을 전부 차지 */
+            clear: both;
+            float: right;
+            background-color: brown;
+            margin: 200px 50px 30px;
+            /* width: 100%; */
+        }
+        .box4{
+            clear: both;
+            float: right;
+            background-color: cornflowerblue;
+            margin: 0px 1000px 0px 500px;
+        }
+        /* 
+        margine:50px;   위(top)좌우(left,right)아래(bottom) 의 같은 방향
+        margine:50px 60px; 가로(left,right) 세로(top,bottom) 설정 값 방향
+        margine: 0 auto; 대상 안의 기준으로 자동 조절
+        margine: 0 0 0; 위(top) 좌우(left,right) 설정 값 방향
+        margine: 0 0 0 0; 위(top)좌우(left,right)아래(bottom) 설정 값 방향
+        하나하나 마진을 적용 할 때
+
+        ----- padding도 같은 방식으로 여백 적용
+        */
+       
+    </style>
+</head>
+
+<body style="height:2000px;">
+
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    
+</body>
+    
+
+</html>

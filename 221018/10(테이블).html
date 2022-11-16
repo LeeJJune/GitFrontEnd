@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body bgcolor="skyblue" background="">
+    <table width="600" height="300" cellpadding="0" cellspacing="5" border="1" bgcolor="#555555">
+        <tr>
+            <td widht="200"height="100" align="center" valign="middle" bgcolor="#ffffff">1-1</td>
+            <td widht="200"height="100" align="right" valign="top" bgcolor="#ffffff">1-2</td>
+            <td widht="200"height="100" align="center" valign="top" bgcolor="#ffffff">1-3</td>
+        </tr>
+        <tr>
+            <td widht="200"height="100" align="center" valign="bottom" bgcolor="#ffffff">2-1</td>
+            <td widht="200"height="100" align="center" bgcolor="#ffffff">2-2</td>
+            <td widht="200"height="100" align="center" bgcolor="#ffffff">2-3</td>
+        </tr>
+        <tr>
+            <td widht="200"height="100" align="center" bgcolor="#ffffff">3-1</td>
+            <td widht="200"height="100" align="center" bgcolor="#ffffff">3-2</td>
+            <td widht="200"height="100" align="center" bgcolor="#ffffff">3-3</td>
+        </tr>
+    </table>
+<br><br><br>
+<!-- colspan 가로칸 합치기 rowspan 세로칸 합치기-->
+<table width="500" height="500" cellpadding="0" cellspacing="5" border="1" bgcolor="#555555">
+    <tr>
+        <td widht="100"height="100" align="center" valign="middle" bgcolor="#ffffff" colspan="2">1-1</td>
+        <!-- <td widht="100"height="100" align="center" valign="top" bgcolor="#ffffff">1-2</td> -->
+        <td widht="100"height="100" align="center" valign="top" bgcolor="#ffffff">1-3</td>
+        <td widht="100"height="100" align="right" valign="top" bgcolor="#ffffff">1-4</td>
+        <td widht="100"height="100" align="center" valign="top" bgcolor="#ffffff">1-5</td>
+    </tr>
+    <tr>
+        <td widht="100"height="100" align="center" valign="bottom" bgcolor="#ffffff" colspan="5">2-1</td>
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">2-2</td> -->
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">2-3</td> -->
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">2-4</td> -->
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">2-5</td>     -->
+    </tr>
+    <tr>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff" rowspan="2">3-1</td>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff" rowspan="3">3-2</td>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">3-3</td>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">3-4</td>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">3-5</td>
+    </tr>
+    <tr>
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">4-1</td> -->
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">4-2</td> -->
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">4-3</td>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff" rowspan="2">4-4</td>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">4-5</td>
+    </tr>
+    <tr>
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">5-1</td>
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">5-2</td> -->
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">5-3</td>
+        <!-- <td widht="100"height="100" align="center" bgcolor="#ffffff">5-4</td> -->
+        <td widht="100"height="100" align="center" bgcolor="#ffffff">5-5</td>
+    </tr>
+
+</table>
+
+</body>
+
+</html>

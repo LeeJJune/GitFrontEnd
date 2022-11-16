@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+        div{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1vw; /* 숫자 단위는 % 100이면 100% */
+        }
+        h3{
+            font-size: 1vh; /* 숫자 단위는 % 100이면 100% */
+        }
+        .box1{
+            width: 15em;
+            height: 300px;
+            border: 3px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="test">TEST(20px X 200% => 40px)
+        <div>TEST1-1(40px X 200% => 80px)
+            <div>TEST1-2(80px X 200% => 160px)</div>
+        </div>
+    </div>
+    <h2>vw라는 단위로 글자 크기 설정</h2>
+    <h3>vh라는 단위로 글자 크기 설정</h3>
+    <div class="box1">box1</div>
+    <div class="box2" style="width: 60%; height: 200px; border: 2px solid red;">
+        <div class="box2-2" style="width: calc(100%/2); height: 200px; border: 2px solid blue;">
+        </div>
+    </div>
+</body>
+<!-- em은 부모요소의 글자 크기에 1em은 100%를 의미한다.
+    즉, 부모가 20px 일때 하위 단위는 2em 경우 40px 가 된다.
+    rem은 문서에 최상위에 있는 글자크기를 기준으로 1rem이 100%를 의미한다.  
+    ex & ch는 em, rem 폰트사이즈에 의존한다는 점이 비슷함
+
+    vw / wh = 웹브라우저창에 가로값과 세로값을 의미 한다. 
+    100vw - 현재 웹브라우저 창에 가로값 100%를 의미한다.
+    100vh - 현재 웹브라우저 창에 세로값 100%를 의미한다.
+
+    vmiin & vmax 뷰포트의 너비값과 높이값에 상대적으로 최대값과 최소값
+    
+-->
+</html>
