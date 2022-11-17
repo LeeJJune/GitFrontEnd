@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수데이터타입 - 문자형</title>
+
+
+</head>
+<body>
+    <script>
+    'use script'; // 엄격형으로 선언
+
+    const num1 = 10;
+    const num2 = 20;
+
+    const str1 = "Hello JavaScript";
+    const str2 = "Hello Word";
+    const str3 = "100";
+
+    console.log("num1(10)+num2(20)= "+(num1+num2)); // 숫자 연산(숫자형+숫자형)
+    console.log(num1+"+"+str1); // 문자 연산(숫자형+문자형)
+    console.log(num1+"") // 문자연산(숫자형 + 문자형)
+
+    //typeof: 데이터 타입 확인
+    console.log(typeof (num1)); //숫자형
+    console.log(typeof (num1+"")); //문자열형
+
+    console.log(str1+" "+str2); //문자결합(문자열 + 문자열)
+
+    console.log(`자바스크립트에서는 문자열을
+쌍따옴표, 따옴표로 둘러싸인 문자의 집합을 의미합니다.
+${num1}`);  //${num1} 변수값일 출력
+
+    console.log(num1+"+"+num2+"="+(num1+num2));
+    console.log(`${num1}+${num2} = ${num1+num2}`);
+
+
+    document.write(
+    `자바스크립트에서는 문자열을<br>
+    쌍따옴표, 따옴표로 둘러싸인 문자의 집합을 의미합니다.
+    ${num1}`);
+
+    </script>
+    
+</body>
+
+</html>
