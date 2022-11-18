@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script> 
+    'use strict'
+    
+    let menu = prompt("P: Pizza , S:Spaghetti, R:Risotto, D:Drink\n메뉴를 선택하세요");
+    let chage = menu.toUpperCase();     // 소문자 대문자로 변환
+
+    switch(chage){
+        
+        case "P":document.write("Pizza를 주문하셧습니다"); break;
+        case "S":document.write("Spaghetti 주문하셧습니다"); break;
+        case "R":document.write("Risotto 주문하셧습니다"); break;
+        case "D":document.write("Drink 주문하셧습니다"); break;
+
+        default:
+            alert("메뉴 단축키를 확인하세요");
+            chage = ("메뉴 단축키를 확인하세요");
+    }
+    console.log(`${chage}`);
+
+
+    </script>
+</body>
+</html>

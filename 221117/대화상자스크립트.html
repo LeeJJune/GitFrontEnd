@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        'use script'
+        'use strict'
 
         // alert("안녕하세요 javascript");
         // document.write("확인버튼을 눌렀습니다");
@@ -21,9 +21,9 @@
         // document.write("당신의 이름은"+(name)+ "이군요. 방갑습니다.<br>");
         // document.write(`당신의 이름 타입은 ${typeof name} 이군요. 환영합니다.`);
 
-        if(name !== String){
+        if(name !== Number){
             Number(name);
-            document.write("당신의 이름은 "+(name)+ "이군요. 방갑습니다.<br>");
+            document.write("당신의 이름은 "+ (name) + "이군요. 방갑습니다.<br>");
             document.write(`당신의 이름 타입은 ${typeof name} 이군요. 환영합니다.`);
             document.write("하하하");  
         }

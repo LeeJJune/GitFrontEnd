@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script> 
+    'use strict'
+
+    const age = Number(prompt("나이를 입력하세요"));
+/*
+    if(age > 19){
+        console.log("성인입니다");
+    }
+    else{
+        console.log("미성년자입니다\n프로그램을 종료합니다");
+    }
+*/
+    // 위 프로그램 줄이기(단 if 조건이 하나일 때만 사용 가능)
+    // 아래 프로그램 조금 이상함 else 조건까지 같이 출력됨
+    // console.log("미성년자입니다\n프로그램을 종료합니다"); 만 있을때
+    // else 붙여주니 출력 안됨
+    // "else" console.log("미성년자입니다\n프로그램을 종료합니다");
+
+    if(age > 19) console.log("성인입니다");
+    else console.log("미성년자입니다\n프로그램을 종료합니다");
+
+
+    </script>
+</body>
+</html>

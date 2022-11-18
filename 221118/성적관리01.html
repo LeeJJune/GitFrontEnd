@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0 0;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+    'use strict'
+
+    const name = prompt("이름을 입력하세요");
+    const kor = Number(prompt ("국어 점수를 입력하세요"));
+    const eng = Number(prompt ("영어 점수를 입력하세요"));
+    const math = Number(prompt ("수학 점수를 입력하세요"));
+
+    let total = kor + eng + math;
+    let avg = total / 3;
+
+    document.write(`<h2>${name}</h2>`);
+    document.write(`<p>국어 점수는 ${kor} 입니다</p><br>`);
+    document.write(`<p>영어 점수는 ${eng} 입니다</p><br>`);
+    document.write(`<p>수학 점수는 ${math} 입니다</p><br>`);
+
+    document.write(`<p>점수 합계는 ${total} 입니다</p><br>`);
+    document.write(`<p>평균은 ${Math.trunc (avg)} 입니다</p><br>`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script> 
+    'use strict'
+    
+    let a = Number(prompt("첫번째 숫자를 입력하기"));
+    let b = Number(prompt("두번째 숫자를 입력하기"));
+    let op = prompt("연산자를 입력하세요");
+    let total;
+
+    switch(op){
+        case "+": total = a + b; break;
+        case "-": total = a - b; break;
+        case "*": total = a * b; break;
+        case "/": total = a / b; break;
+
+        default:
+            alert("입력 값을 확인하세요");
+            total = ("입력 값을 확인하세요");
+    }
+    console.log(`a ${op} b = ${total}`);
+
+
+    </script>
+</body>
+</html>

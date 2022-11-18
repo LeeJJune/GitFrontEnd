@@ -1,0 +1,17 @@
+#contaner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0px auto;
+    width: 1000px;
+    height: 500px;
+
+    background-color: darkseagreen;
+}
+.box{
+    width: 150px;
+    height: 150px;
+
+    background-color: blueviolet;
+}
