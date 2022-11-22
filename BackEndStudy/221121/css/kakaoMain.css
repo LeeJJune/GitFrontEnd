@@ -17,43 +17,223 @@ aside{
     z-index: 10;
     top: 0px;
     left: 0px;
-    width: 370px;
+    width: 390px;
     height: 100%;
     box-shadow: 2px 2px 5px rgba(240, 255, 255, 0.761);
     background-color: white;
 }
 header{
+    padding: 20px 20px 2px;
+    
     height: 116px;
     background-color: #258FFF;
-
 }
-#map{
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+
+    padding-top: 5px;
+    height: 48px;
+}
+.title-text{
+    margin: 0;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+.fa-bars{
+    margin-right: 10px;
+    padding: 1px 0px;
+    font-size: 20px;
+    color: white;
+}
+.map-text{
+    font-size: 20px;
+    font-weight: 700;
+}
+.check-location{
+    display: flex;
+    align-items: center;
+    
+    color: white;
+}
+#my-location{
+    display: none;
+}
+.my-location-label{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    cursor: pointer;
+}
+#my-location + label::before{
+    content: " ";
+    display: inline-block;
+    margin-right: 5px;
+    /* align-items: center; */
+    padding-bottom: 3px;
+    width: 12px;
+    height: 10px;
+    border: 2px solid #ffffff90;
+    border-radius: 10px;
+    background-color: white;
+}
+#my-location:checked + .my-location-label::before{
+    content: "✔";
+    display: inline-block;
+    margin-right: 5px;
+    padding-bottom: 3px;
+    line-height: 10px;
+    width: 12px;
+    height: 10px;
+    border-radius: 10px;
+    color: #258FFF;
+    background-color: white;
+}
+.search{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    border-radius: 3px;
     width: 100%;
+    height: 46px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    background-color: white;
+    overflow: hidden;
+}
+.search-input{
+    border: none;
+    outline: none;
+    /* padding-left: 15px; */
+    padding: 12px 16px 15px;
+
+    width: 309px;
     height: 100%;
+}
+.search-input::-webkit-input-placeholder{
+    font-size: 15px;
+    color: rgb(204,204,204);
+    font-weight: 550;
+}
+.fa-magnifying-glass{
+    /* padding: 15px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 36px;
+    height: 36px;
+    margin: 5px 0px;
+    font-size: 16px;
+    
+    color: rgb(204,204,204);
 }
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #258FFF;
 
     margin: 0;
     padding: 0px 11px;
     height: 54px;
+
+    background-color: #258fff;
     list-style-type: none;
 }
 .menu li{
     padding: 12px 9px;
 }
-.mainmenusub{
-    padding: 4px 7px;
+.menu li a{
+    display: inline-block;
     text-decoration: none;
     text-align: center;
     color: white;
 }
-.mainmenusub-tap-selectde{
+.mainmenutab{
+    display: inline-block;
+    padding: 4px 7px;
+
     width: 56px;
     height: 30px;
+
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.mainmenusub{
+    display: inline-block;
+    padding: 4px 7px;
+
+    width: 56px;
+    height: 30px;
+
+}
+.tab-selected {
+    border-radius: 4px;
+    background-color: #1467dd;
     font-weight: 700;
-    background-color: #0D5BD4CC;
+}
+.reportError{
+    border-bottom: 1px solid #f0f0f0;
+    height: 84px;
+}
+.info{
+    border-bottom: 1px solid #f0f0f0;
+    padding: 23px 0px 19px 15px;
+    height: 120.5px;
+}
+.title-around{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
+    border: none;
+    font-size: 13px;
+}
+.list-around{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
+    border: none;
+    font-size: 13px;
+}
+.button_around{
+    border: none;
+    width: 50px;
+    height: 48px;
+    background-color: #ffffff90;
+}
+.button-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+
+    overflow: hidden;
+}
+.button-icon i{
+    color: #555555;
+}
+.button_title{
+    font-size: 10px;
+    color: #dbdbdb;
+
 }

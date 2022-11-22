@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    "use strict";
+    
+    let arr = ["루시",10,3.5,true];
+
+    for(let i = 0; i<arr.length; i++){
+        console.log(arr[i]);
+        document.write(`반복문을 이용한 배열 출력: ${arr[i]}<br>`);
+    }
+
+    //배열 요소 추가
+    arr[4] = "white";
+    arr[5] = "포메리안";
+    console.log(arr[5], arr[6]);
+    document.write(`<br>`);
+    document.write(`기존 배열에 값 추가: ${arr[5]} ${arr[6]}<br>`);
+    console.log("배열 총 개수: "+ arr.length);
+
+    document.write("--------------------------------------------<br>");
+    arr.pop();
+    for(let i = 0; i<arr.length; i++){
+        console.log(arr[i]);
+        document.write(`반복문을 이용한 배열 출력: ${arr[i]}<br>`);
+    }
+
+    console.log("배열 총 개수: "+ arr.length);
+    
+    </script>
+
+
+</body>
+</html>

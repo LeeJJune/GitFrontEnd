@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    "use strict";
+
+    // // 구구단 전체 표기
+    // let sum = 0;
+
+    // for(let i = 2; i <= 9; i++){
+    //     for(let j = 2; j<=9; j++){
+    //         sum = i * j;
+    //         document.write(`${i} * ${j} = ${sum} <br>`);
+    //     }
+    // }
+
+    
+    //특정 단수만 출력하기
+    const dan = Number(prompt("원하는 단을 입력"));
+    document.write(`<p>${dan} 단<p>`);
+
+    for(let i=2; i<=9; i++){
+        document.write(`${dan}*${i}=${dan * i}<br>`);
+    }
+    </script>
+
+
+</body>
+</html>
