@@ -178,62 +178,160 @@ header{
     background-color: #1467dd;
     font-weight: 700;
 }
+.home{
+    height: 719px;
+}
 .reportError{
+ 
+    padding: 25px 26px 0px;
     border-bottom: 1px solid #f0f0f0;
     height: 84px;
 }
+.approxAddr{
+    font-size: 11px;
+    color: #999999;
+}
+.approxAddr a{
+    overflow: hidden;
+    
+}
+.weather{
+    display: flex;
+    justify-content: start;
+
+    font-size: 14px;
+}
+.infoAir{
+
+}
+.infoAir span{
+    font-size: 11px;
+}
+.dust_state{
+    color: #1467dd;
+}
 .info{
     border-bottom: 1px solid #f0f0f0;
-    padding: 23px 0px 19px 15px;
+    padding: 23px 0px 19px 19px;
     height: 120.5px;
 }
-.title-around{
+.title-around {
+    margin: 0;
+    padding-left: 8px;
+    font-size: 13px;
+}
+
+.list-around {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+}
+
+.button-around {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
-    margin: 0;
-    padding: 0;
-    padding-left: 8px;
-    border: none;
-    font-size: 13px;
-}
-.list-around{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
-    margin: 0;
-    padding: 0;
-    padding-left: 8px;
-    border: none;
-    font-size: 13px;
-}
-.button_around{
+
     border: none;
     width: 50px;
     height: 48px;
-    background-color: #ffffff90;
+    background-color: #ffffff00;
+
+    cursor: pointer;
 }
-.button-icon{
+
+.button-icon {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
     margin: 0px 10px;
-    border: 1px solid white;
+    border: 1px solid #f0f0f0;
     border-radius: 30px;
     width: 30px;
     height: 30px;
 
     overflow: hidden;
 }
-.button-icon i{
+.button-icon:hover{
+    background-color: #999999;
+}
+.button-icon i {
     color: #555555;
 }
-.button_title{
+.button-title {
     font-size: 10px;
-    color: #dbdbdb;
+    color: #a0a0a0;
+}
+.favorite_exposed{
 
+    padding: 24px 25px 17px 26px;
+    border-bottom: 1px solid #f0f0f0;
+    height: 143px;
+}
+.favorite_exposed li{
+    list-style: none;
+}
+.ico_home i{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+.house-input{
+    border: none;
+}
+.office-input{
+    border: none;
+}
+
+
+.newPlace{
+    display: inline-block;
+
+    padding: 24px 26px;
+    background-color: aquamarine;
+    height: 148px;
+}
+.notice{
+    padding: 24px 26px;
+    background-color: #258FFF;
+    border-bottom: 1px solid #f0f0f0;
+    height: 49px;
+}
+.Footer{
+    padding: 24px 26px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #555555;
+    height: 31px;
+}
+
+.toggle-button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    width: 20px;
+    height: 54px;
+    top: 50%;
+    right: -18px;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 2px 0px 5px rgba(0, 0,0 ,0.2);
+
+    font-size: 10px;
+    line-height: 18px;
+    transform: translate(0, -50%);
+
+    background-color: white;
+    color: #258fff;
 }

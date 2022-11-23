@@ -33,9 +33,6 @@
                     <input type="text" class="search-input" placeholder="장소, 주소, 버스 검색">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-
-            
-            
             </header>
             <ul class="menu">
                 <li><a href="" class="mainmenutab tab-selected">검색</a></li>
@@ -44,23 +41,108 @@
                 <li><a href="" class="mainmenusub">지하철</a></li>
                 <li><a href="" class="mainmenusub">MY</a></li>
             </ul>
+            <div class="home">
             <div class="reportError">
-                <a href="" class="report">오류신고</a>
+                <a href="" class="approxAddr">오류신고</a>
+                <span class="weather"><b>부산진구 양정1동</b></span>
+                <div class="infoAir">
+                    <span class="air">맑음</span>
+                    <span class="temper"><b>15˚</b></span>
+                    <span class="txt_change">어제보다 1℃ 높아요</span>
 
-            </div>
+                    <span class="txt_bar">|</span>
+
+                    <span class="txt_dust">미세</span>
+                    <span class="dust_state">좋음</span>
+                    <span class="txt_dust">초미세</span>
+                    <span class="dust_state">좋음</span>
+
+
+                
+                </div>
+        </div>
 
             <div class="info">
-                <h3 class="title_around">주변탐색</h3>
+                <h3 class="title-around">주변 탐색</h3>
                 <ul class="list-around">
                     <li>
-                        <button class="button_around">
-                            <div class="button-icon">
-                            <i class="fa-solid fa-utensils"></i></div>
-                            <span class="button_title">음식점</span>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-utensils"></i></div>
+                        <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-mug-hot"></i></div>
+                        <span class="button-title">카페</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-bus"></i></div>
+                        <span class="button-title">버스</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-train-subway"></i></div>
+                        <span class="button-title">지하철</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-bed"></i></div>
+                        <span class="button-title">숙박</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+                        <span class="button-title">은행</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                        <div class="button-icon">
+                        <i class="fa-solid fa-store"></i></div>
+                        <span class="button-title">편의점</span>
                         </button>
                     </li>
                 </ul>
             </div>
+
+            <div class="favorite_exposed">
+                <h3 class="link_myfavorite"><b>즐겨찾기 ></b></h3>
+                <ul class="ico_home">
+                    <li><i class="fa-solid fa-house"></i>
+                <input type="text" class="house-input" placeholder="집 주소를 등록하세요">
+            </li>
+            <li><i class="fa-solid fa-building"></i>
+                <input type="text" class="office-input" placeholder="회사 주소를 등록하세요">
+            </li>
+            </div>
+
+            <div class="newPlace">
+                <h6 class="tit_newplace"><b>새로운장소</b></h6>
+                <span>새로운 수정된 장소를 알고 계세요?<br>
+                장소 제안은 지도 품질 향상에 큰 도움이 됩니다</span>
+                <button class="link_suggest">신규장소등록</button>
+            </div>
+        </div>
+
+        <div class="notice">
+
+        </div>
+        <div class="Footer">
+
+        </div>
+            <button type="button" class="toggle-button">◀</button>
         </aside>
         <div id="map"></div>
     </div>
