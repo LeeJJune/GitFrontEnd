@@ -14,22 +14,57 @@
         console.log(`전달 받은 매개변수의 값은 ${num} 입니다`);
     }
 
+
+
     fun1(10);
     fun1(5);
+
+
 
     console.log("=====================================================");
 
     function fun2(start, end){
         let sum=0;
-        for(let i = start; i<=end.length; i++){
+        for(let i = start; i<=end; i++){
             sum += i;
         }
         console.log(`${start} 부터 ${end} 까지의 합은 ${sum} 입니다`);
     }
 
-    fun2(1, 10);
+    fun2(1, 100);
     
 
+    console.log("=====================================================");
+
+    function fun3(num1=1, num2=1){
+        console.log(`${num1}+${num2} = ${num1+num2}`);
+        console.log(`${num1}-${num2} = ${num1-num2}`);
+        console.log(`${num1}*${num2} = ${num1*num2}`);
+        console.log(`${num1}/${num2} = ${num1/num2}`);
+    }
+
+    fun3(5, 3);
+    fun3();
+
+    console.log("=====================================================");
+    // ... <- 나머지 값 구할때 배열로 출력 하게 하는 표시
+
+    function fun4(num1, num2, ...num3){
+        console.log(`num1의 값: ${num1}`);
+        console.log(`num2의 값: ${num2}`);
+        console.log(`num3의 값: ${num3}`);
+    }
+
+    fun4(100, 90, 50, 40, 30, 80, 70);
+
+    console.log("=====================================================");
+
+    function fun5(...jumsu){
+        for(let i of jumsu){
+            console.log(i);
+        }
+    }
+    fun5(100, 90, 50, 40, 30, 80, 70);
 
     </script>
 
