@@ -29,34 +29,21 @@
                 <label for="my-location" class="my-location-label">현 지도 내 장소검색</label>
                 </div>
             </div>
-            <div class="search-container">
                 <div class="search">
                     <input type="text" class="search-input" placeholder="장소, 주소, 버스 검색">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                    <div class="search_recent invisible-recent">
-                    <div class="tit_recent">
-                        히스토리가 없습니다.
-                    </div>
-                    <ul class="list-recent"></ul>
-                    <div class="favorite-recent">
-                        <button type="button" class="button_recentoff">
-                            히스토리 끄기
-                        </button>
-                </div>
-            </div>
-        </div>
             </header>
             <ul class="menu">
-                <li><a href="javascript:void(0);" class="mainmenutab tab-selected">검색</a></li>
-                <li><a href="javascript:void(0);" class="mainmenusub">길찾기</a></li>
-                <li><a href="javascript:void(0);" class="mainmenusub">버스</a></li>
-                <li><a href="javascript:void(0);" class="mainmenusub">지하철</a></li>
-                <li><a href="javascript:void(0);" class="mainmenusub">MY</a></li>
+                <li><a href="" class="mainmenutab tab-selected">검색</a></li>
+                <li><a href="" class="mainmenusub">길찾기</a></li>
+                <li><a href="" class="mainmenusub">버스</a></li>
+                <li><a href="" class="mainmenusub">지하철</a></li>
+                <li><a href="" class="mainmenusub">MY</a></li>
             </ul>
             <div class="home">
             <div class="reportError">
-                <a href="#" class="approxAddr">오류신고</a>
+                <a href="" class="approxAddr">오류신고</a>
                 <span class="weather"><b>부산진구 양정1동</b></span>
                 <div class="infoAir">
                     <span class="air">맑음</span>
@@ -126,11 +113,6 @@
                 </ul>
             </div>
 
-            <div class="search-body invisible-dody">길찾기 화면</div>
-            <div class="search-body invisible-dody">버스 화면</div>
-            <div class="search-body invisible-dody">지하철 화면</div>
-            <div class="search-body invisible-dody">MY 화면</div>
-
             <div class="favorite_exposed">
                 <h3 class="link_myfavorite"><b>즐겨찾기 ></b></h3>
                 <ul class="ico_home">
@@ -140,7 +122,6 @@
             <li><i class="fa-solid fa-building"></i>
                 <input type="text" class="office-input" placeholder="회사 주소를 등록하세요">
             </li>
-        </ul>
             </div>
 
             <div class="newPlace">
@@ -152,24 +133,53 @@
         </div>
 
         <div class="notice">
-            <div class="ico_notice">공지</div>
-            <div class="noticeList">
+            <span>
+                <div class="ico_notice">공지</div>
+                <p class="link_more">더보기</p>
                 <a href="#">데이터센터 화재로 인한 카카오맵 장애 사과문</a>
-                
-            </div>
-            <p class="link_more">더보기</p>
+            </span>
+
         </div>
         <div class="Footer">
-            
-            <a href="#" class="xa">고객센터 </a>
+            <a href="#" class="xa">고객센터</a>
             <span>·</span>
             <a href="#" class="xc">신규 장소 등록</a>
         </div>
             <button type="button" class="toggle-button">◀</button>
         </aside>
-
         <div id="map"></div>
     </div>
-    <script src="js/kakaoMap.js"></script>
+	
+
+
+
+	<script>
+	var container = document.getElementById('map');
+	var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+	var map = new kakao.maps.Map(container, options);
+
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+    var mapTypeControl = new kakao.maps.MapTypeControl();
+
+    // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+    // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+    // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+    var zoomControl = new kakao.maps.ZoomControl();
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+	</script>
+    
 </body>
 </html>
