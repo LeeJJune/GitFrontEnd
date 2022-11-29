@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    border: 0;
+}
+
+.main-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.main-box > div:nth-child(2){
+    margin-left: 100px;
+    position: absolute;
+    float: left;
+    background-color: aqua;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+
+    text-decoration: none;
+    border: 1px solid black;
+}
