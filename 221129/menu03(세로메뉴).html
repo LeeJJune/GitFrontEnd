@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .mainmn{
+            margin: 100px;
+            width: 100px;
+            border: 1px solid #000000;
+        }
+        .mainmn>li {
+            float: left;
+            width: 100px;
+            
+            border: 1px solid #000000;
+            text-align: center;
+            line-height: 30px;
+        }
+        .mainmn li>a{
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: #ccc;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.5s;
+        }
+        .mainmn li.on>a{
+            
+            width: 100%;
+            height: 30px;
+            background-color: blueviolet;
+            line-height: 30px;
+            color: white;
+        }
+        .mainmn>li:hover>a {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: cornflowerblue;
+            color: white;
+        }
+        .submn{
+            display: none;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        .submn li{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .submn li>a{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .submn>li.on>a {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: darksalmon;
+            color: white;
+        }
+        .submn>li:hover>a {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: darkorange;
+            color: white;
+        }
+    </style>
+        <script src="./js/jquery_v3.61.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.submn').hide();  // 초기값 서브 메뉴 숨김
+
+                $('.mainmn>li>a').click(function(){
+                    // $('.submn').hide();     // 서브 메뉴 숨김
+                    // $('.submn').each(function(){    // $('.submn')의 내용을 each문 사용하여 순서대로 순환처리
+                    //     if($('this').show()){
+                    //         $('this').hide();
+                    //     }
+                    // })
+
+                    $('.submn').each(function(){
+                        if($(this).css("display") != "bloack"){
+                            $(this).hide();
+                        }
+                    })
+            
+
+                    // $(this).next('.submn').show();
+                    // $(this).next('.submn').slideDown();
+                    $(this).next('.submn').fadeIn();
+                });
+
+            })
+
+        </script>
+</head>
+<body>
+    <ul class="mainmn">
+        <li><a href="#">menu</a>
+        <ul class="submn">
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>
+            <ul class="submn">
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>        
+            <ul class="submn">
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>
+            <ul class="submn">
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">menu</a>        
+            <ul class="submn">
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            <li><a href="#">smenu</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>

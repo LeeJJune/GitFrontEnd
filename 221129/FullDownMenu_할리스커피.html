@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀다운 메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            list-style: none;
+        }
+        #wrap{
+            width: 100%;
+        }
+        #header{
+            width: 100%;
+            height: 120px;
+            background-color: blueviolet;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #header .nav{
+            width: 600px;
+            height: 80px;
+            /* border: 2px solid #ccc; */
+        }
+        #header .nav ul{
+            display: flex;
+        }
+        #header .nav ul li{
+            width: 20%;
+            text-align: center;
+            line-height: 80px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: burlywood;
+        }
+        #header .nav ul li a{
+            display: block;
+            width: 120px;
+            height: 60px;
+            background-color: transparent;
+            color: #000;
+            line-height: 60px;
+            transition: all 0.5s;
+        }
+        #header .nav ul li.on a {
+            background-color: tomato;
+            color: #fff;
+
+        }
+        #subarea{
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-color: #ccc;
+            
+        }
+        #main_img{
+            width: 100%;
+            height: 400px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+    <script src="./js/jquery_v3.61.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#subarea').hide();
+
+            let view = false;
+
+            $('.nav').mouseenter(function(){
+            // $('#subarea').slideDown();
+            if(view == false){
+                view = true;
+                $('#subarea').show().css({height:'0'}).animate({height:'400px'});
+            }
+            
+            })
+            $('#subarea').mouseleave(function(){
+            // $(this).slideUp();
+            if(view == true){
+                view = false;
+            $('#subarea').css({height:'400px'}).animate({height:'0'});
+        }
+        })
+        $('.nav ul li').hover(
+            function(){
+                $(this).addClass('on');
+            },
+            function(){
+                $(this).removeClass('on');
+            });
+    });
+    </script>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="subarea">
+            <div class="mainmenu">
+            <ul>
+                <li><a href="#">COFFEE</a></li>
+                <li><a href="#">라떼 · 초코릿 · 티</a></li>
+                <li><a href="#">할라치노  ·  빙수</a></li>
+                <li><a href="#">스파클링</a></li>
+                <li><a href="#">푸드</a></li>
+                <li><a href="#">MD상품</a></li>
+                <li><a href="#">MD상품</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">할라스콘</a></li>
+                <li><a href="#">할리스카드</a></li>
+                <li><a href="#">E-store</a></li>
+                <li><a href="#">구매내역</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">스마트오더</a></li>
+                <li><a href="#">멤버쉽 혜택</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Notice</a></li>
+                <li><a href="#">Event</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">매장검색</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">HOLLYS</a></li>
+                <li><a href="#">할리스 위치 및 연락처</a></li>
+                <li><a href="#">채용 안내</a></li>
+                <li><a href="#">가맹 문의 및 절차</a></li>
+                <li><a href="#">B2B 사업소개</a></li>
+            </ul>
+        </div>
+    </div>
+        <section id="main_img"></section>
+    </div>
+</body>
+</html>

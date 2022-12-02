@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul, li{
+        list-style: none;
+    }
+    #slide{
+        width: 100%;
+        height: 400px;
+        position: relative;
+        
+    }
+    #view{
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+    }
+    #view li{
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 0;
+
+    }
+    #view li:nth-child(1){
+        left: 0;
+        background-color: aquamarine;
+    }
+    #view li:nth-child(2){
+        left: 100%;
+        background-color: blueviolet;
+    }
+    #view li:nth-child(3){
+        left: 200%;
+        background-color: brown;
+    }
+    #view li:nth-child(4){
+        left: 300%;
+        background-color: cornflowerblue;
+    }
+    .btns{
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        z-index: 9999;
+        margin-left: -45px;
+    }
+    .btns li{
+        float: left;
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        background-color: aqua;
+        cursor: pointer;
+        border-radius: 100px;
+    }
+    .btns li.on{
+        background-color: blue;
+    }
+    #btn-area{
+        width: 500px;
+
+    }
+    button{
+        margin-top: 10px;
+        padding: 5px 12px;
+        background: black;
+        color: #ccc;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<script src="js/jquery_v3.61.js"></script>
+<script src="js/slide.js"></script>
+<body>
+    
+    <div id="slide">
+        <div id="view">
+            <ul>
+                <li>img1</li>
+                <li>img2</li>
+                <li>img3</li>
+                <li>img4</li>
+            </ul>
+        </div>
+        <ul class="btns">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

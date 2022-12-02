@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀다운 메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            list-style: none;
+        }
+
+    </style>
+</head>
+    <script src="./js/jquery_v3.61.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // 대상을 클릭 했을때 이벤트 발생
+            /* $('p').click(function(){
+             alert('테스트가 선택되었음');                
+            }) */
+
+            
+            //대상을 누르거나 눌렀다가 뗏을때 각각 이벤트 발생
+            /*  $('p').mousedown(function(){
+                 $(this).after('<p style="color:red">마우스 버튼 다운</p>');
+              });
+              $('p').mouseup(function(){
+                 if(mousedown == true){
+                 $(this).hide();
+                 $(this).after('<p style="color:blue">마우스 버튼 업</p>');
+             }
+            }); */
+
+
+            //자기자신에게 마우스를 올렸을때와 나갔을때 이벤트가 각각 발생
+            /*$('p').hover(
+                function(){
+                    // $('p').css({속성:'속성값', 속성:'속성값'})  //제이쿼리로 스타일 적용하기
+                    $('p').css("background-color", "yellow");
+                },
+                function(){
+                    $('p').css("background-color", "pink");
+                }
+             )*/
+
+
+            // 마우스 포인트가 대상 영역 안에 또는 밖으로 나갈때 각각 이벤트 발생
+            /*$('p').mouseenter(function(){                  
+                $('p').css("background-color", "yellow");
+            }),
+            $('p').mouseleave(function(){
+                    $('p').css("background-color", "pink");
+                }
+            )
+
+            $('p').mouseover(function(){                  
+            $('p').css("background-color", "yellow");
+            }),
+            $('p').mouseout(function(){
+                    $('p').css("background-color", "pink");
+                }
+            ) 
+            */
+
+
+            // 마우스 커서로 대상 영역(focusin) 이나 영역 밖(focusout) 클릭 했을때 이벤트 발생
+            /*$('div').focusin(function(){
+                $(this).css("background-color", "yellow");
+            })
+            $('div').focusout(function(){
+                $(this).css("background-color", "pink");
+            })
+            */
+
+
+            // 마우스가 움직일때 마다 이벤트가 발생(좌표값)
+            /*$(document).mousemove(function(event){
+                $('span').text(event.pageX + ','+ event.pageY);
+                // $('span').html('html 형식');
+            })
+            */
+
+            
+
+
+
+        });
+    </script>
+
+<body>
+    <p><b>여기를 클릭해보기</b></p>
+
+    <div style="border: 1px solid black; padding:10px;">
+    이름 : <input type="text"><br>
+    주소 : <input type="text"><br>
+</div>
+    <p>마우스 좌표는 : <span></span></p>
+
+
+</body>
+</html>

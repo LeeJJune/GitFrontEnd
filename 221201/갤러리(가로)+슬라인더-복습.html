@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul, li{
+        list-style: none;
+    }
+    #slide{
+        width: 500px;
+        height: 280px;
+        position: relative;
+        overflow: hidden;
+    }
+    #view{
+        position: absolute;
+        width: 500px;
+        height: 280px;
+        left: 0;
+    }
+    #view li{
+        width: 100%;
+        height: 280px;
+        position: absolute;
+        top: 0;
+
+    }
+    #view li:nth-child(1){
+        left: 0;
+        background: url(./images/pic1.jpg) no-repeat 100% 0;
+    }
+    #view li:nth-child(2){
+        left: 100%;
+        background: url(./images/pic2.jpg) no-repeat 100% 0;
+    }
+    #view li:nth-child(3){
+        left: 200%;
+        background: url(./images/pic3.jpg) no-repeat 100% 0;
+    }
+    #view li:nth-child(4){
+        left: 300%;
+        background: url(./images/pic4.jpg) no-repeat 100% 0;
+    }
+    #view-sub{
+        position: relative;
+        width: 500px;
+        height: 280px;
+        left: 0;
+    }
+    #view-sub li{
+        width: 100%;
+        height: 280px;
+        position: absolute;
+        top: 0;
+    }
+    #view-sub li:nth-child(1){
+        left: 0;
+        background-color: aquamarine;
+    }
+    #view-sub li:nth-child(2){
+        left: 100;
+        background-color: blue;
+    }
+    #view-sub li:nth-child(3){
+        left: 200;
+        background-color: blueviolet;
+    }
+    #view-sub li:nth-child(2){
+        left: 300;
+        background-color: cornflowerblue;
+    }
+    .btns{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 9999;
+    }
+    .btns li{
+        float: left;
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        background-color: aqua;
+        cursor: pointer;
+    }
+    .btns li.on{
+        background-color: blue;
+    }
+    #btn-area{
+        width: 500px;
+
+    }
+    button{
+        margin-top: 10px;
+        padding: 5px 12px;
+        background: black;
+        color: #ccc;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<script src="js/jquery_v3.61.js"></script>
+<script>
+    $(document).ready(function(){
+        let cu=0;
+        let id=0;
+
+        $('.btns li').click(function(){
+            let i = $(this).index();
+            movie(i);
+        });
+
+        timer();
+
+        $('#slide').on({mouseover:function(){
+                clearInterval(Id)
+            },  
+            mouseout:function(){
+                timer();
+            }
+        });
+
+        function timer(){
+        Id = setInterval(function(){
+            i = cu + 1;
+            if(i == 4){
+                i = 0;
+            }
+            movie(i);
+        }, 1000)};
+
+        function movie(n){
+        if(cu == n) return;
+
+        cuE1 = $('#view li').eq(cu);
+        nextE1 = $('#view li').eq(n);
+        cuE1.css({left: '0%'}).animate({left: '-100%'});
+        nextE1.css({left: '100%'}).animate({left: '0%'});
+    
+        cu = n;
+        $('.btns li').removeClass('on');
+        $('.btns li').eq(n).addClass('on');
+        }
+    });
+
+</script>
+<body>
+    <div id="slide">
+        <div id="view">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <ul class="btns">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="view-sub">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="btn-area">
+
+    </div>
+</body>
+
+</html>

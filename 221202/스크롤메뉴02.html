@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+#warp{
+    width: 950px;
+    margin: 0 auto;
+    padding-bottom: 400px;
+}
+#top_menu{
+    width: 950px;
+    height: 114px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgb(230, 218, 218);
+}
+#top_menu ul{
+    float: left;
+    margin-left: 85px;
+}
+#top_menu ul li{
+    padding: 59px 150px 0px 63px;
+    float: left;
+    list-style: none;
+    font-size: 20px;
+    color: crimson;
+    cursor: pointer;
+}
+#top_menu ul li.on{
+    color: black;
+    font-weight: bold;
+}
+
+#contents>div{
+    
+    width: 100%;
+    height: 800px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 200px;
+    color: black;
+}
+#contents>div.con1{
+    background-color: aquamarine;
+}
+#contents>div.con2{
+    background-color: crimson;
+}
+#contents>div.con3{
+    background-color: deepskyblue;
+}
+
+#q_mn{
+    position: absolute;
+    right: 20px;
+    top: 300px;
+    z-index: 9999;
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: rgb(55, 153, 223);
+}
+#q_mn ul.nav{
+    margin: 0 auto;
+    margin-top: 7px;
+    list-style: none;
+    width: 50px;
+}
+#q_mn ul.nav li{
+    margin-bottom: 10px;
+}
+#q_mn ul.nav li.on a{
+    color: red;
+    font-weight: bold;
+}
+#q_mn ul.nav li a{
+    font-size: 20px;
+    color: rgb(68, 61, 203);
+}
+</style>
+    <script src="js/jquery_v3.61.js"></script>
+    <script src="js/scrollmenu.js"></script>
+<body>
+    <div id="warp">
+    <div id="top_menu">
+        <ul>
+            <li>Con1</li>
+            <li>Con2</li>
+            <li>Con3</li>
+        </ul>
+    </div>
+    <div id="contents">
+        <div class="con1">1</div>
+        <div class="con2">2</div>
+        <div class="con3">3</div>       
+    </div>
+    <div id="q_mn">
+        <ul class="nav">
+        <li><a href="#">Con1</a></li>
+        <li><a href="#">Con2</a></li>
+        <li><a href="#">Con3</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

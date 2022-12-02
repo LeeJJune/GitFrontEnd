@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul, li{
+        list-style: none;
+    }
+    #slide{
+        width: 500px;
+        height: 280px;
+        border: 2px solid black;
+        position: relative;
+        overflow: hidden;
+    }
+    #view{
+        position: absolute;
+        
+        left: 0px;
+        top: 0px;
+        width: 500px;
+        height: 1120px;
+    }
+    #view img{
+        float: left;
+    }
+    .btns{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 9999;
+    }
+    .btns li{
+        float: left;
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+        background-color: aqua;
+        cursor: pointer;
+    }
+    .btns li.on{
+        background-color: blue;
+    }
+    #btn-area{
+        width: 500px;
+
+    }
+    button{
+        margin-top: 10px;
+        padding: 5px 12px;
+        background: black;
+        color: #ccc;
+        border: none;
+        cursor: pointer;
+    }
+
+</style>
+<script src="js/jquery_v3.61.js"></script>
+<script>
+    $(document).ready(function(){
+        let current = 0;
+
+        $('.btns > li').eq(current).addClass('on');
+
+        $('.btns > li').click(function(){
+           let i = $(this).index();
+           console.log(i);
+           movie(i);
+           $('.btns > li').removeClass('on');
+           $(this).addClass('on');
+        });
+
+        $('#prev').click(function(){  
+            if(current > 0){
+                current -= 1;
+                n = current;
+                movie(n);
+                console.log(n);
+                $('.btns> li').removeClass('on');
+                $('.btns> li').eq(n).addClass('on');
+            }
+
+        });
+        $('#next').click(function(){
+            if(current < 3){
+                current += 1;
+                n = current;
+                movie(n);
+                console.log(n);
+                $('.btns> li').removeClass('on');
+                $('.btns> li').eq(n).addClass('on');
+            }
+        });
+
+
+        function movie(n){
+            pos = (-280) * n +'px';
+            $('#view').animate({top: pos });
+            //$('#vier')에 애니메이션을 하고 버튼에 색상을 변경 할 경우 여기 적용
+            //$('.btns> li').removeClass('on');
+            //$('.btns> li').eq(n).addClass('on');
+        }
+
+    });
+</script>
+<body>
+    
+    <div id="slide">
+        <div id="view">
+            <img src="./images/pic1.jpg" alt="">
+            <img src="./images/pic2.jpg" alt="">
+            <img src="./images/pic3.jpg" alt="">
+            <img src="./images/pic4.jpg" alt="">
+        </div>
+        <ul class="btns">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="btn-area">
+        <button id="prev">previous</button>
+        <button id="next">next</button>
+    </div>
+
+
+</body>
+
+</html>

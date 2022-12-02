@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+#warp{
+    width: 950px;
+    margin: 0 auto;
+    padding-bottom: 400px;
+}
+#top_menu{
+    position: fixed;
+    width: 950px;
+    height: 114px;
+    margin: 0 auto;
+    text-align: center;
+    top: 0;
+    background: rgb(230, 218, 218);
+    /* opacity: 0.5; */
+}
+#top_menu ul{
+    float: left;
+    margin-left: 50px;
+}
+#top_menu ul li{
+    padding: 59px 0px 0px 63px;
+    float: left;
+    list-style: none;
+    color: crimson;
+    cursor: pointer;
+}
+/* #top_menu ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+#top_menu ul li.on a{
+    color: black;
+    font-weight: bold;
+} */
+#top_menu ul li.on{
+    color: black;
+    font-weight: bold;
+}
+#contents{
+    
+}
+#contents>div{
+    width: 100%;
+    height: 800px;
+    padding-top: 114px;
+}
+#contents>div.con1{
+    background-color: aquamarine;
+}
+#contents>div.con2{
+    background-color: crimson;
+}
+#contents>div.con3{
+    background-color: deepskyblue;
+}
+</style>
+    <script src="js/jquery_v3.61.js"></script>
+    <script src="js/scrollmenu.js"></script>
+<body>
+    <div id="warp">
+    <div id="top_menu">
+        <ul>
+            <li>con1</li>
+            <li>con2</li>
+            <li>con3</li>
+        </ul>
+    </div>
+    <div id="contents">
+        <div class="con1">con1</div>
+        <div class="con2">con2</div>
+        <div class="con3">con3</div>       
+    </div>
+</div>
+</body>
+</html>
