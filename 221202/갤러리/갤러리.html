@@ -6,30 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script src="js/jquery_v3.61.js"></script>
+<style>
+    #caption{
+        position: relative;
+        width: 480px;
+        /* height: 17px; */
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 1px solid black;
+        color: white;
+    }
+</style>
+<script src="./js/jquery_v3.61.js"></script>
 <body>
     <div id="gallery">
         <div style="border: 2px solid black; width: 500px;" class="btns">
             <a href="images/pic1.jpg"><img src="images/th_pic1.jpg" /></a>
+            <em>첫번째 이미지 설명글</em>
             <a href="images/pic2.jpg"><img src="images/th_pic2.jpg" /></a>
+            <em>두번째 이미지 설명글</em>
             <a href="images/pic3.jpg"><img src="images/th_pic3.jpg" /></a>
+            <em>세번째 이미지 설명글</em>
         </div>
         <div id="largeImg">
-            <img src="images/pic1.jpg" alt="imga1" />
+            <img src="images/pic1.jpg" alt="" />
         </div>
     </div>
     <script>
-        $(document).ready(function(){
-            $('.btns a').click(function(e){
-                e.preventDefault(); // a태그가 href 이벤트 상실
-                let path = $(this).attr('href');
-                // 저장공간 변수 = 대상.attr("속성명"); => 해당 대상의 태그속성값 추출
-                // 대상.attr({속성명:속성값}) => 해당 대상의 속성에 속성값 지정
-                if(path != $("#largeImg img").attr("src")){
-                $('#largeImg img').attr({src:path});
-                // 애니메이션
-		        $("#largeImg img").css({opacity:0}).stop().animate({opacity:1}, 500);
-                }
+    $(document).ready(function(){
+        $('em').hide();
+
+        $('.btns a').click(function(e){
+            e.preventDefault(); // a태그가 href 이벤트 상실
+
+        if($("#caption")){
+            $('#caption').remove();
+        }
+
+        let path = $(this).attr('href');
+            // 저장공간 변수 = 대상.attr("속성명"); => 해당 대상의 태그속성값 추출
+            // 대상.attr({속성명:속성값}) => 해당 대상의 속성에 속성값 지정
+            if(path != $("#largeImg img").attr("src")){
+            $('#largeImg img').attr({src:path});
+            // 애니메이션
+		    $("#largeImg img").css({opacity:0}).stop().animate({opacity:1}, 500);
+            }
+            //풍선말 추가하기(태그요소추가)
+        let msg = $(this).next('em').text();    // em 태그 안에 있는 글자만 추출한다
+        /*
+            $('#largeImg').append();    => 대상에서 자식요소중에서 마지막에 추가
+            $('#largeImg').prepend();   => 대상에서 자식요소중에 처음에 추가
+        */
+        $('#largeImg').append('<div id="caption"></div>');
+        $('#caption').text(msg);
+
+        let posy = $('#caption').height() +27;  //padding 공간을 포함한 수치
+        $('#caption').animate({top: "-=" + posy + "px"}, 300);
             })
         })
     </script>
